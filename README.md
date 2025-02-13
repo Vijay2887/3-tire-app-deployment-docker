@@ -11,3 +11,9 @@ Before running the Docker setup, make sure you have the following installed on y
 - **Docker Login**: Make sure to log in to Docker using the command:
   ```bash
   docker login
+
+## clone the repository
+
+  ```bash
+  git clone https://github.com/Vijay2887/3-tire-app-deployment-docker.git
+
