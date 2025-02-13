@@ -14,6 +14,6 @@ Before running the Docker setup, make sure you have the following installed on y
 
 ## clone the repository
 
-  ```bash
-  git clone https://github.com/Vijay2887/3-tire-app-deployment-docker.git
+```bash
+git clone https://github.com/Vijay2887/3-tire-app-deployment-docker.git
 
