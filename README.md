@@ -1,6 +1,7 @@
 # 3-tire-app-deployment-docker
 
 ## Overview
+
 This repository contains a dockerized version of Employee Management System (Full Stack)
 
 ## Prerequisites
@@ -11,14 +12,40 @@ Before running the Docker setup, make sure you have the following installed on y
 - **Docker Login**: Make sure to log in to Docker using the command:
   ```bash
   docker login
+  ```
 
 ## clone the repository
 
 ```bash
 git clone https://github.com/Vijay2887/3-tire-app-deployment-docker.git
+```
 
 ## change the project directory
 
 ```bash
 cd 3-tire-app-deployment-docker
+```
 
+## run the commands
+
+```bash
+docker-compose build --no-cache
+```
+
+```bash
+docker-compose up
+```
+
+## Access
+
+You can access the web project at
+
+```bash
+localhost:5173
+```
+
+## Stop the containers
+
+```bash
+docker-compose down
+```
