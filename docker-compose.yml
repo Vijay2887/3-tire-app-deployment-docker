@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - 5173:5173
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - 3000:3000
+    env_file:
+      - ./backend/.env
+    healthcheck:
+      interval: 30s
+      retries: 3
+      timeout: 10s
+      start_period: 5s
+    depends_on:
+      - database
+
+  database:
+    image: mongo:4.4
+    ports:
+      - 27017:27017
+
+    env_file:
+      - ./.env
+    volumes:
+      - ems_data:/data/db
+    healthcheck:
+      interval: 30s
+      retries: 3
+      timeout: 10s
+      start_period: 5s
+
+volumes:
+  ems_data:
